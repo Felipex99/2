@@ -1,0 +1,17 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @cliente.nome %>
+</p>
+
+<p>
+  <strong>Atividade:</strong>
+  <%= @cliente.atividade %>
+</p>
+
+<p>
+  <strong>Pagamento:</strong>
+  <%= @cliente.pagamento %>
+</p>
+
+<%= link_to 'Editar', edit_cliente_path(@cliente), class:"btn btn-dark text-white" %>
+<%= link_to 'Voltar', clientes_path , class:"btn btn-dark text-white"%>

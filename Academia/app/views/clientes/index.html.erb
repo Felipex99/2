@@ -1,0 +1,28 @@
+<h1>Clientes</h1>
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr class="bg-dark">
+      <th style="color: white">Nome</th>
+      <th style="color: white">Atividade</th>
+      <th style="color: white">Pagamento</th>
+      <th colspan="3" style="color:white;"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.nome %></td>
+        <td><%= cliente.atividade %></td>
+        <td><%= cliente.pagamento %></td>
+        <td><%= link_to 'Exibir', cliente ,class:"btn btn-dark"%></td>
+        <td><%= link_to 'Editar', edit_cliente_path(cliente) ,class:"btn btn-dark"%></td>
+        <td><%= link_to 'Deletar', cliente, method: :delete, data: { confirm: 'Tem certeza que quer deletar?' } , class: "btn btn-danger"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Cliente', new_cliente_path ,class:"btn btn-dark text-white" %>
