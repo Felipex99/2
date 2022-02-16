@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :exercicios
   resources :clientes
   root'home#index'
   get 'home/clientes'
